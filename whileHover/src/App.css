@@ -1,0 +1,49 @@
+.image_container::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+}
+.image_container:hover::after{
+    animation: bg_drop 500ms ease-in;
+    background: transparent;
+}
+.image_container:hover .information{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, .8) 60.42%);
+}
+.information > *{
+    display: none;
+    left: 0;
+    top: 0;
+}
+.image_container:hover .information > *{
+    display: block;
+    animation-duration: 1000ms;
+    animation-delay: -4s,;
+    animation-name: container_content;
+}
+
+
+
+@keyframes bg_drop {
+    0%{
+        background: rgba(0,0,0,.8);
+    }
+    100%{
+        background: transparent;
+    }
+}
+@keyframes container_content{
+  from{
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
