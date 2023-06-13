@@ -48,9 +48,11 @@ function MainContent({ setSelected}) {
                         key={image.id}
                         className='flex flex-grow hover:cursor-pointer image_container relative overflow-hidden'
                         layoutId={`card-${image.id}`}
+
                         onClick={() => {
                           setSelected(image);
                         }}
+                        
                         >
                         <motion.img 
                             src={`${base_url}${image.url}`} alt="" key={image.id} setSelected={setSelected} className='w-full h-full object-cover'/>

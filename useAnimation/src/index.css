@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Montserrat:wght@500&display=swap');
+
+body{
+    background-color: whitesmoke;
+}
+
+.ff-barlow{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.ff-monsterot{
+    font-family: 'Montserrat', sans-serif;
+}
+.hire:hover .arrow{
+    position: absolute;
+    width: 100%;
+}
+.image_container,.project-container{
+    isolation: isolate;
+}
+.image_container > *, .project-container > *{
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+}
+.steps{
+    overflow-y: hidden;
+}
+
