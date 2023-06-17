@@ -1,18 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import LandingPage from './landingPage'
 import Fullview from './fullview'
 import Sneaker from './sneaker'
 import Outfit from './outfit'
-import Items from './Items'
 
 function Home() {
-    
-  return (
+  const [currentItem,setCurrentItem] = useState(null)
+  const [isActive,setActive] = useState(false)
+
+  return (  
    <>
-   <Items/>
-   {/* <Sneaker/> */}
-   {/* <Outfit/> */}
-    {/* <LandingPage />    */}
+    <LandingPage status={isActive} item={currentItem} selectedStatus={setActive} selectedItem={setCurrentItem} />  
+    {(currentItem === "sneakers") ? <Sneaker status={isActive} selectedStatus={setActive}  itemStatus={setCurrentItem} /> : (currentItem === "Outfits") ? <Outfit status={isActive} selectedStatus={setActive}  itemStatus={setCurrentItem} /> : null } 
    </>
   )
 }

@@ -1,8 +1,29 @@
-export const scale ={
-    hover:{
-      scale:1.1
-    }
+export const animationStart = 1;
+
+export const initialState ={
+  fadeIn:{
+    opacity: [0,.7],y:["0px","20px"],
+    transition:{delay:1}
+  },
+  fadeOut:{
+    y:"-1000px",
+    transition:{
+      ease:"easeOut",
+      type:"spring",
+      delay:1
+    },
+  },
   }
+
+export const fadeInOut = {
+  fadeIn:{
+    opacity: [0,1,],y:["0px","5px"]
+  },
+  fadeOut:{
+    opacity: [1,0],y:["5px","0px"]
+  }
+}
+
 
 export const image_container = {
     hidden:{
@@ -31,7 +52,7 @@ export const image_container = {
 
   export const overview ={
     overview:{
-      width:"100%", 
+      flex:1, 
       transition:{
         type:"spring", 
         damping: 50,
@@ -39,4 +60,6 @@ export const image_container = {
   },
  
   }
+
+
  

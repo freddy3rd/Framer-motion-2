@@ -26,12 +26,6 @@ function MainContent({ setSelected}) {
       }
     }
   }
-
-  // const overview = {
-  //   open
-  // }
-
-
   return (
 
     <>
@@ -49,8 +43,9 @@ function MainContent({ setSelected}) {
                         animate="visible"
                         whileHover="hover"
                         whileTap="hover"
-                        key={image.id}
                         className='flex flex-grow hover:cursor-pointer image_container relative overflow-hidden'
+                        
+                        key={image.id}
                         layoutId={`card-${image.id}`}
 
                           onClick={() => {

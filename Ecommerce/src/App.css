@@ -50,6 +50,11 @@
     background-position:140px -40px;
     background-image: url(assets/model_man.png);
   }
- /* .image_container:hover img{
-  scale: 1.2;
- } */
+
+  .icon{
+    transition: transform 200ms ease-in-out;
+  }
+
+  .button:hover .icon{
+    transform: translateX(5px);
+  }

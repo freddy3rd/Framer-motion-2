@@ -1,11 +1,19 @@
 import React from 'react'
 import avatar from '../assets/avatar.png'
+import { Link } from 'react-router-dom'
 
-function Navigation() {
+function Navigation({selectedStatus,itemStatus}) {
   return (
     <div className="navbar md:fixed md:top-0 rounded-none z-40">
   <div className="flex-1">
-    <a className="btn btn-ghost normal-case text-xl ff-quattrocetto">E-Commerce</a>
+    <Link
+     onClick={() => 
+      {
+      selectedStatus(false)
+      itemStatus(null)
+      }
+    }
+    to="/" className="btn btn-ghost normal-case text-xl ff-quattrocetto">E-Commerce</Link>
   </div>
   <div className="flex-none">
     <div className="dropdown dropdown-end">
