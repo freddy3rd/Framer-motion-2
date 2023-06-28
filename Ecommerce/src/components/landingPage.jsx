@@ -23,7 +23,7 @@ function LandingPage({status,item,selectedStatus,selectedItem}) {
               variants={image_container}
               initial="hidden"
               whileHover="hover"
-              whileTap="hover"
+              // whileTap="hover"
               className='flex flex-grow hover:cursor-pointer image_container relative'
               
               key="sneakers"
@@ -63,7 +63,8 @@ function LandingPage({status,item,selectedStatus,selectedItem}) {
                   selectedStatus(true)
                   selectedItem("sneakers")}
                   }
-                  className='px-5 py-2 rounded-full ring-1 bg-transparent ring-[#F6F6F6] flex items-center gap-2 ff-archivo font-bold mt-5 w-[max-content] z-10 button hover:bg-gradient-to-tr from-[]'>Discover More <AiOutlineArrowRight className="icon"/> </motion.button>
+                 
+                  className='px-5 py-2 rounded-full ring-1 bg-transparent ring-[#F6F6F6] flex items-center gap-2 ff-archivo font-bold mt-5 w-[max-content] z-10 button hover:bg-gradient-to-tr from-[] z-30'>Discover More <AiOutlineArrowRight className="icon"/> </motion.button>
                 </Link>
                 
               </motion.div>

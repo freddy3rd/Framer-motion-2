@@ -142,10 +142,10 @@ function Home() {
         <div className='max-w-[650px] h-screen relative'>
             <motion.div 
             variants={scaleY}
-            initial = "initialState"
-            animate ="endState"
+            // initial = "initialState"
+            // animate ="endState"
             className='relative sm:absolute ff-monsterot leading-6 text-justify grid gap-5 px-4 md:translate-y-44 md:-translate-x-20'>
-            <p className='text-black'>Hello and welcome to my web portfolio! I'm <b>Clifford</b>, a passionate and aspiring web developer with a strong dedication to creating aesthetically pleasing, user-friendly, and functional websites. With a deep understanding of modern web technologies and a keen eye for design, I strive to deliver outstanding digital experiences that leave a lasting impact.</p>
+           
            <div className="flex gap-20">
 
            <motion.button 

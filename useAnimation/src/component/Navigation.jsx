@@ -16,7 +16,7 @@ animate={{
   }
 }}
 
-className="navbar fixed top-0 z-50 bg-white flex justify-between shadow-lg  " >
+className="navbar fixed top-0 justify-between z-40 bg-white shadow-lg  " >
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -88,7 +88,7 @@ className="navbar fixed top-0 z-50 bg-white flex justify-between shadow-lg  " >
       tabIndex={0}>
         <details>
           <summary>Projects</summary>
-          <motion.ul className="p-2 text-white font-semibold">
+          <motion.ul className="p-2 font-semibold">
             <motion.li
             variants={reveal}
             ><a>JAVASCRIPT</a></motion.li>

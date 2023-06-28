@@ -10,6 +10,14 @@ export const reveal: Variants = {
   },
 };
 
+export const inview: Variants = {
+  hiddenVariant: { x: -50, opacity: 0 },
+  revealedVariant: {
+    x: 0,
+    opacity: 1,
+  },
+};
+
 export const scaleY:Variants = {
   hiddenVariant: {scaleY:5, transformOrigin: "top"},
   revealedVariant: {
