@@ -34,7 +34,7 @@ export const projects = [
                 0: project_2a,
                 1:project_2b
             },
-            link: "https://main--aesthetic-sawine-7f3f32.netlify.app/",
+            link: "https://respsive-comment-section.netlify.app/",
             desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima aperiam veniam amet explicabo. Vel pariatur sunt facere nihil laboriosam illo?"
         },
        {
@@ -60,7 +60,7 @@ export const projects = [
             thumnails:{
                 0: project_5a,
             },
-            link: "https:/main--aesthetic-sawine-7f3f32.netlify.app/",
+            link: "https://tip-calc-design.netlify.app/",
             desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima aperiam veniam amet explicabo. Vel pariatur sunt facere nihil laboriosam illo?"
         },
        {
@@ -68,7 +68,7 @@ export const projects = [
             thumnails:{
                 0: project_6a,
             },
-            link: "https:/main--aesthetic-sawine-7f3f32.netlify.app/",
+            link: "https://grid-portfolio-design.netlify.app/",
             desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima aperiam veniam amet explicabo. Vel pariatur sunt facere nihil laboriosam illo?"
         },
        {
@@ -77,7 +77,7 @@ export const projects = [
                 0: project_7a,
                 1: project_7b,
             },
-            link: "https:/main--aesthetic-sawine-7f3f32.netlify.app/",
+            link: "https://hover-effect-design.netlify.app/",
             desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima aperiam veniam amet explicabo. Vel pariatur sunt facere nihil laboriosam illo?"
         },
 

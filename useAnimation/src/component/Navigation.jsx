@@ -36,10 +36,10 @@ className="navbar fixed top-0 justify-between z-40 bg-white shadow-lg  " >
       tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 ff-barlow text-xl tracking-wider">
         <motion.li
         variants={reveal}
-        ><a>Home</a></motion.li>
+        ><a href='#hero-section'>Home</a></motion.li>
         <motion.li
         variants={reveal}
-        ><a>About</a></motion.li>
+        ><a href='#about-section'>About</a></motion.li>
         <motion.li
         variants={reveal}
         >
@@ -47,7 +47,10 @@ className="navbar fixed top-0 justify-between z-40 bg-white shadow-lg  " >
           <motion.ul className="p-2">
             <motion.li
             variants={reveal}
-            ><a>JAVASCRIPT</a></motion.li>
+            ><a href='#project-section'>ALL</a></motion.li>
+            <motion.li
+            variants={reveal}
+            ><a >JAVASCRIPT</a></motion.li>
             <motion.li
             variants={reveal}
             ><a>REACT</a></motion.li>
@@ -79,16 +82,19 @@ className="navbar fixed top-0 justify-between z-40 bg-white shadow-lg  " >
     className="menu menu-horizontal px-1 font-semibold ff-barlow tracking-wider">
       <motion.li
       variants={reveal}
-      ><a>Home</a></motion.li>
+      ><a href='#hero-section'>Home</a></motion.li>
       <motion.li
       variants={reveal}
-      ><a>About</a></motion.li>
+      ><a href='#about-section'>About</a></motion.li>
       <motion.li
       variants={reveal}
       tabIndex={0}>
         <details>
           <summary>Projects</summary>
           <motion.ul className="p-2 font-semibold">
+            <motion.li
+            variants={reveal}
+            ><a href='#project-section'>ALL</a></motion.li>
             <motion.li
             variants={reveal}
             ><a>JAVASCRIPT</a></motion.li>

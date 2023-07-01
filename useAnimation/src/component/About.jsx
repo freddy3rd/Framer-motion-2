@@ -8,6 +8,8 @@ import QCU from '../assets/Quezon-City-University.jpg'
 export default function About() {
   const [activeSchool, setACtiveSchool] = useState("HS")
 
+  const skills = ["HTML","CSS","BOOTSTRAP","TAILWINDCSS","JAVASCRIPT","JQUERY","REACT JS","MYSQL","PHOTOSHOP","FIGMA"]
+
   const ref = useRef(null)
   const isInView = useInView(ref, {once:true})
   const mainControl = useAnimation()
@@ -20,24 +22,23 @@ export default function About() {
  
   return (
     <>
-      <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 max-w-[1200x] gap-5 px-5 justify-center items-center my-20">
+      <div id='about-section' ref={ref} className="grid grid-cols-1 sm:grid-cols-2 max-w-[1200x] gap-5 px-5 justify-center items-center my-20">
         <motion.div 
         variants={reveal}
         initial="hiddenVariant"
         animate={mainControl}
         transition={{duration:0.5}}
         className='mx-5'>
-              <h1 className='text-4xl font-bold text-black uppercase self-end mb-10 text-center sm:text-start'>Lorem Ipsum</h1>
-              <p className=' md:max-w-[400px] ff-monsterot text-justify font-light text-black my-4' >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio harum necessitatibus laudantium, vitae nobis dolore corporis consequuntur ad repellat, animi expedita! Illum eius qui, ea quisquam a repellendus ratione facere.</p>
+              <h1 className='text-4xl font-bold text-black uppercase self-end mb-10 text-center sm:text-start'>My Journey</h1>
+              <p className=' md:max-w-[450px] ff-monsterot text-justify font-light text-black my-4' > I prioritize continuous learning and staying up-to-date with the latest front-end technologies, trends, and best practices. This allows me to adapt quickly to evolving industry standards and deliver modern, cutting-edge web experiences.</p>
               <b>Related Skills</b>
-              <div className="flex flex-wrap gap-2 mt-4 w-[100%] lg:max-w-[300px] font-semibold ff-barlow text-base-200 ">
-                <span className='px-4 py-2 uppercase bg-slate-500 rounded-full hover:cursor-pointer'>HTML</span>
-                <span className='px-4 py-2 uppercase bg-slate-500 rounded-full hover:cursor-pointer'>CSS</span>
-                <span className='px-4 py-2 uppercase bg-slate-500 rounded-full hover:cursor-pointer'>BOOTSTRAP</span>
-                <span className='px-4 py-2 uppercase bg-slate-500 rounded-full hover:cursor-pointer'>TAILWIND CSS</span>
-                <span className='px-4 py-2 uppercase bg-slate-500 rounded-full hover:cursor-pointer'>Javascript</span>
-                <span className='px-4 py-2 uppercase bg-slate-500 rounded-full hover:cursor-pointer'>REACT</span>
-                <span className='px-4 py-2 uppercase bg-slate-500 rounded-full hover:cursor-pointer'>MYSQL</span>
+              <div className="flex flex-wrap gap-2 mt-4 w-[100%] lg:max-w-[350px] font-semibold ff-barlow text-base-200 ">
+                {
+                  skills.map((skill)=>{
+                    return <span key={skill} className='px-4 py-2 uppercase bg-slate-500 rounded-full hover:cursor-pointer'>{skill}</span>
+                  })
+                }
+                
               </div>
         </motion.div>
         
@@ -124,6 +125,7 @@ export default function About() {
                   <div className='text-start relative px-3 '>
                     <p className='xl:text-2xl text-md text-center '>JUDGE FELICIANO BELMONTE HIGH SCHOOL</p>
                     <p className=' text-gray-700 xl:text-start text-center'>HIGH SCHOOL</p>
+                    <span>2013 - 2017</span>
                   </div>
                 </motion.li>
                 <motion.li 
@@ -135,6 +137,7 @@ export default function About() {
                   <div className='text-start relative  px-3'>
                     <p className='xl:text-2xl text-md text-center '>JUDGE FELICIANO BELMONTE HIGH SCHOOL</p>
                     <p className=' text-gray-700 xl:text-start text-center'>SENIOR HIGH SCHOOL</p>
+                    <span>2017 - 2019</span>
                   </div> 
                   
                 </motion.li>
@@ -147,6 +150,7 @@ export default function About() {
                   <div className='text-start relative lg:self-center self-start'>
                   <p className='xl:text-2xl text-md text-center'>QUEZON CITY UNIVERSITY</p>
                   <p className=' text-gray-700 xl:text-start text-center'>COLLEGE</p>
+                  <span>2019 - 2023</span>
                   </div> 
                 </motion.li>   
               </ul>

@@ -12,10 +12,10 @@ function Footer() {
       
       <div>
         <span className="footer-title">Social Media</span> 
-        <a className="link link-hover">Facebook</a> 
-        <a className="link link-hover">Instagram</a> 
-        <a className="link link-hover">Codepen</a>
-        <a className="link link-hover">Github</a>
+        <a href='https://www.facebook.com/profile.php?id=100090103471650' target='_blank' className="link link-hover">Facebook</a> 
+        <a href='https://www.instagram.com/arnejo_developer/' target='_blank' className="link link-hover">Instagram</a> 
+        <a href='https://codepen.io/ARNEJOCLIFFORD' target='_blank' className="link link-hover">Codepen</a>
+        <a href='https://github.com/freddy3rd' target='_blank' className="link link-hover">Github</a>
       </div> 
 
       <div>

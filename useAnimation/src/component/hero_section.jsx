@@ -1,10 +1,11 @@
 import React from 'react'
 import video from '../assets/video/hero_video.mp4'
+import cv from '../assets/arnejo-cv.pdf'
 // import projects from '../data/project-data'
 function Hero_section() {
   return (
     <>
-        <div className="hero-section w-full relative grid grid-cols-1 place-items-center">
+        <div className="hero-section w-full relative grid grid-cols-1 place-items-center" id='hero-section'>
             <video className='w-screen h-screen object-cover'
             autoPlay 
             muted 
@@ -58,7 +59,7 @@ function Hero_section() {
                             </ul>
                             </div>
                         </div>
-                        <button className='ring-1 ring-white z-10 px-4 py-2'>Download CV</button>
+                        <a  className=' bg-sky-500  hover:bg-cyan-600 font-bold z-10 px-4 py-2 flex items-center cursor-pointer' href={cv} download>Download CV</a>
                         </div>
                     </div>
                 </div>
