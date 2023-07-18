@@ -4,12 +4,11 @@ import { FaTelegramPlane } from "react-icons/fa";
 function Contact() {
   const employeerEmail = useRef();
   const content = useRef();
-  const [sending, sent] = useState(false);
+  const [isSent, sent] = useState(true);
 
   const emailreport = (from, email, subject, content) => {
     fetch(
       "https://https-uidiscoveriesmailer-onrender-com.onrender.com/sendEmail",
-      // "http://localhost:3001/sendEmail",
       {
         method: "POST",
         headers: {
@@ -40,10 +39,10 @@ function Contact() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    sent(false);
     emailreport(
       "Ui Discoveries",
       "clifford.dle.arnejo@gmail.com",
-      // "clifford.dle.arnejo@gmail.com",
       `Employeer's Feedback (${employeerEmail.current.value})`,
       content.current.value
     );
@@ -78,7 +77,12 @@ function Contact() {
           placeholder="Your message goes here"
         ></textarea>
         <button className="btn btn-primary flex items-center gap-3">
-          SEND <FaTelegramPlane />
+          {isSent ? (
+            "SEND"
+          ) : (
+            <span className="loading loading-dots loading-sm"></span>
+          )}
+          {isSent && "SEND" && <FaTelegramPlane />}
         </button>
       </form>
     </div>

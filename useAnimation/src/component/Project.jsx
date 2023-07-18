@@ -1,75 +1,89 @@
-import React, { useEffect, useRef, useState } from 'react'
-import {projects} from '../data/project-data'
-import {reveal,inview} from "../utils/animation"
-import { motion, useAnimation, useInView } from 'framer-motion'
-import Project_preview from './project-preview'
+import React, { useEffect, useRef, useState } from "react";
+import { projects } from "../data/project-data";
+import { reveal, inview } from "../utils/animation";
+import { motion, useAnimation, useInView } from "framer-motion";
+import Project_preview from "./project-preview";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { Splide, SplideSlide } from '@splidejs/react-splide'
-
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 function Project() {
+  const [isSelected, setSelected] = useState("Responsive Message");
+  const [activeTab, setActiveTab] = useState(0);
+  const [thumbnails, setThumbnails] = useState([]);
 
-  const [isSelected, setSelected] = useState("Responsive Message")
-  const [activeTab,setActiveTab] = useState(0)
-  const [thumbnails,setThumbnails] = useState([])
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControl = useAnimation();
 
-  const ref = useRef(null)
-  const isInView = useInView(ref, {once:true})
-  const mainControl = useAnimation()
-
-  useEffect(()=>{
-    if(isInView){
-      mainControl.start("revealedVariant")
+  useEffect(() => {
+    if (isInView) {
+      mainControl.start("revealedVariant");
     }
-  },[isInView])
+  }, [isInView]);
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log(isSelected);
-  },[isSelected])
+  }, [isSelected]);
 
-  function toggleTab(index){
-    setActiveTab(index)
-  }
-  
-  function selected(project){
-    setSelected(project)
+  function toggleTab(index) {
+    setActiveTab(index);
   }
 
-
-  const option ={
-
+  function selected(project) {
+    setSelected(project);
   }
+
+  const option = {};
   return (
     <>
-    <div id="project-section" ref={ref}  className="grid md:grid-cols-2 grid-cols-1 gap-10 px-10 place-item-center py-32">
       <div
-      variants={reveal}
-      className="project-preview min-h-[400px] max-h-[500px]">
-         {
-        projects.map((data)=>{
-          if(data.ProjectName === isSelected){     
-       
-            return (
-              <div key={crypto.randomUUID()} className='relative h-full'>
-              <h1 className='ff-barlow text-4xl md:text-6xl text-gray-500'>{data.ProjectName}</h1>
-              <span className='absolute top-0 -right-5'><a href={data.link} target='_blank'> <FaExternalLinkAlt href={data.link}/></a></span>
-                 <div className='h-full'>
-                  <img src={data.thumnails[0]} className='w-full h-full object-scale-down' alt="" />
-                 </div>
-              </div>
-            )
-          }
-        })
-      }
-
-      </div>
-      <motion.div
-       variants={inview}
-       initial="hiddenVariant"
-       animate={mainControl}
-       transition={{duration:0.5, delay:0.5,ease:"easeInOut", staggerChildren: 0.5, delayChildren: .5}}
-      className="project-list ff-monsterot grid">
-        {/* <motion.div 
+        id="project-section"
+        ref={ref}
+        className="grid md:grid-cols-2 grid-cols-1 gap-10 px-10 place-item-center py-32"
+      >
+        <div
+          variants={reveal}
+          className="project-preview min-h-[400px] max-h-[500px]"
+        >
+          {projects.map((data) => {
+            if (data.ProjectName === isSelected) {
+              return (
+                <div key={crypto.randomUUID()} className="relative h-full">
+                  <h1 className="ff-barlow text-4xl md:text-6xl text-gray-500">
+                    {data.ProjectName}
+                  </h1>
+                  <span className="absolute top-0 -right-5">
+                    <a href={data.link} target="_blank">
+                      {" "}
+                      <FaExternalLinkAlt href={data.link} />
+                    </a>
+                  </span>
+                  <div className="h-full">
+                    <img
+                      src={data.thumnails[0]}
+                      className="w-full h-full object-scale-down"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              );
+            }
+          })}
+        </div>
+        <motion.div
+          variants={inview}
+          initial="hiddenVariant"
+          animate={mainControl}
+          transition={{
+            duration: 0.5,
+            delay: 0.5,
+            ease: "easeInOut",
+            staggerChildren: 0.5,
+            delayChildren: 0.5,
+          }}
+          className="project-list ff-monsterot grid"
+        >
+          {/* <motion.div 
         variants={reveal}
         className="tabs my-6">
           <a key="tab_1" className={`tab tab-lifted ${activeTab === 0 ? "tab-active" : ""}`} onClick={()=>{toggleTab(0)}}>ALL</a> 
@@ -77,36 +91,45 @@ function Project() {
           <a key="tab_3" className={`tab tab-lifted ${activeTab === 2 ? "tab-active" : ""}`} onClick={()=>{toggleTab(2)}}>REACT JS</a> 
           <a key="tab_4" className={`tab tab-lifted ${activeTab === 3 ? "tab-active" : ""}`} onClick={()=>{toggleTab(3)}}>VANILLA JS</a> 
         </motion.div> */}
-        <h1 className='font-bold text-4xl mb-3'>PROJECTS</h1>
-        <p>With each project, I have gained a deeper understanding of web development concepts, languages, and frameworks. I have learned how to structure code more efficiently, write cleaner and more maintainable code, and leverage the power of libraries and frameworks to streamline development processes. The learning curve has been steep, but immensely rewarding.</p>
-        <motion.div
-        variants={reveal}
-        className="projects grid gap-5 mt-10 self-end max-h-[350px] overflow-y-auto ">
-          {/* iterate all the project  */}
-          {
-            projects.map(data=>{
-              
-              return(
-              <div 
-              key={data.ProjectName}
-                onClick={() => {
-                 
-                  selected(data.ProjectName)
-                  location.href = "#project-section"
-                }}
-
-              className={`project-thumbnails relative rounded-lg overflow-hidden shadow-md p-1 hover:bg-slate-500 ${(data.ProjectName === isSelected )? "bg-slate-500" : ""}`}>
-                <img
-                src={data.thumnails[0]} alt="" className='w-full h-full object-cover rounded-lg' />
-               </div>
-              )
-            })
-          }
+          <h1 className="font-bold text-4xl mb-3">PROJECTS</h1>
+          <p>
+            With each project, I have gained a deeper understanding of web
+            development concepts, languages, and frameworks. I have learned how
+            to structure code more efficiently, write cleaner and more
+            maintainable code, and leverage the power of libraries and
+            frameworks to streamline development processes. The learning curve
+            has been steep, but immensely rewarding.
+          </p>
+          <motion.div
+            variants={reveal}
+            className="projects grid gap-5 mt-10 self-end max-h-[350px] overflow-y-auto "
+          >
+            {/* iterate all the project  */}
+            {projects.map((data) => {
+              return (
+                <div
+                  key={data.ProjectName}
+                  onClick={() => {
+                    selected(data.ProjectName);
+                    location.href = "#project-section";
+                  }}
+                  className={`project-thumbnails relative rounded-lg overflow-hidden shadow-md p-1 hover:bg-slate-500 ${
+                    data.ProjectName === isSelected ? "bg-slate-500" : ""
+                  }`}
+                >
+                  <img
+                    src={data.thumnails[0]}
+                    alt=""
+                    className="w-full h-full object-cover rounded-lg z-10"
+                  />
+                </div>
+              );
+            })}
+          </motion.div>
         </motion.div>
-      </motion.div>
-    </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default Project
+export default Project;
