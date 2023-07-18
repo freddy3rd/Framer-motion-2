@@ -5,9 +5,11 @@ function Contact() {
   const employeerEmail = useRef();
   const content = useRef();
   const [sending, sent] = useState(false);
+
   const emailreport = (from, email, subject, content) => {
     fetch(
       "https://https-uidiscoveriesmailer-onrender-com.onrender.com/sendEmail",
+      // "http://localhost:3001/sendEmail",
       {
         method: "POST",
         headers: {
@@ -39,9 +41,10 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     emailreport(
-      "QCUM",
+      "Ui Discoveries",
       "clifford.dle.arnejo@gmail.com",
-      "Employeer Feedback",
+      // "clifford.dle.arnejo@gmail.com",
+      `Employeer's Feedback (${employeerEmail.current.value})`,
       content.current.value
     );
   };
