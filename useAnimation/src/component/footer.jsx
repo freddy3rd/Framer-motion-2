@@ -1,4 +1,5 @@
 import React from 'react'
+import Contact from './contact'
 
 function Footer() {
   return (
@@ -20,16 +21,7 @@ function Footer() {
 
       <div>
         <span className="footer-title">Get in Touch</span> 
-        <div className="form-control w-80">
-          <label className="label">
-            <span className="label-text">Enter your email address</span>
-          </label> 
-          <div className="relative">
-            <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" /> 
-            <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
-          <textarea name="" id="" cols="30" rows="10" className='w-full mt-4 resize-none' ></textarea>
-          </div>
-        </div>
+       <Contact/>
       </div>
     </footer>
   )

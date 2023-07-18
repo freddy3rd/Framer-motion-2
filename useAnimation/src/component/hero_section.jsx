@@ -1,6 +1,8 @@
 import React from 'react'
 import video from '../assets/video/hero_video.mp4'
-import cv from '../assets/arnejo-cv.pdf'
+import cv from '../assets/Arnejo_Clifford_resume.pdf'
+import { FaCloudDownloadAlt} from "react-icons/fa";
+import Contact from './contact';
 // import projects from '../data/project-data'
 function Hero_section() {
   return (
@@ -44,22 +46,20 @@ function Hero_section() {
                        </div>
                        <p className='max-w-[500px] py-5'>Hello and welcome to my web portfolio! I'm <b>Clifford</b>, a passionate and aspiring web developer with a strong dedication to creating aesthetically pleasing, user-friendly, and functional websites. With a deep understanding of modern web technologies and a keen eye for design, I strive to deliver outstanding digital experiences that leave a lasting impact.</p>
                         <div className='flex gap-4'>
-                        <div className="drawer drawer-end w-[max-content] z-50">
+                        <div className="drawer drawer-end w-[max-content] z-50 flex content-end">
                             <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
-                            <div className="drawer-content">
+                            <div className="drawer-content z-50">
                             {/* Page content here */}
                             <label htmlFor="my-drawer-4" className="drawer-button btn bg-transparent ring-1 ring-white text-white hover:text-black">Get In Touch</label>
                             </div> 
                             <div className="drawer-side">
                             <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
-                            <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
-                                {/* Sidebar content here */}
-                                {/* <li><a>Sidebar Item 1</a></li>
-                                <li><a>Sidebar Item 2</a></li> */}
+                            <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content ">
+                               <Contact/>
                             </ul>
                             </div>
                         </div>
-                        <a  className=' bg-sky-500  hover:bg-cyan-600 font-bold z-10 px-4 py-2 flex items-center cursor-pointer' href={cv} download>Download CV</a>
+                        <a className=' bg-sky-500 hover:bg-cyan-600 font-bold z-10 px-4 py-2 flex items-center gap-2 cursor-pointer' href={cv} download><FaCloudDownloadAlt/> Resume </a>
                         </div>
                     </div>
                 </div>

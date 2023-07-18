@@ -123,9 +123,9 @@ export default function About() {
                 data-content="✓" 
                 className={`step ff-barlow text-black font-semibold hover:cursor-pointer z-30 ${(activeSchool === "HS" || activeSchool === "SHS" || activeSchool === "COLLEGE") ? "active" : ""}`}>
                   <div className='text-start relative px-3 '>
-                    <p className='xl:text-2xl text-md text-center '>JUDGE FELICIANO BELMONTE HIGH SCHOOL</p>
+                    <p className='xl:text-2xl text-md text-center'>JUDGE FELICIANO BELMONTE HIGH SCHOOL</p>
                     <p className=' text-gray-700 xl:text-start text-center'>HIGH SCHOOL</p>
-                    <span>2013 - 2017</span>
+                    <span className='xl:text-start text-center'>2013 - 2017</span>
                   </div>
                 </motion.li>
                 <motion.li 
@@ -137,7 +137,7 @@ export default function About() {
                   <div className='text-start relative  px-3'>
                     <p className='xl:text-2xl text-md text-center '>JUDGE FELICIANO BELMONTE HIGH SCHOOL</p>
                     <p className=' text-gray-700 xl:text-start text-center'>SENIOR HIGH SCHOOL</p>
-                    <span>2017 - 2019</span>
+                    <span className='xl:text-start text-center'>2017 - 2019</span>
                   </div> 
                   
                 </motion.li>
@@ -150,7 +150,7 @@ export default function About() {
                   <div className='text-start relative lg:self-center self-start'>
                   <p className='xl:text-2xl text-md text-center'>QUEZON CITY UNIVERSITY</p>
                   <p className=' text-gray-700 xl:text-start text-center'>COLLEGE</p>
-                  <span>2019 - 2023</span>
+                  <span className='xl:text-start text-center'>2019 - 2023</span>
                   </div> 
                 </motion.li>   
               </ul>

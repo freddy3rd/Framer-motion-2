@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { animationStart, reveal, scaleY } from "../utils/animation";
+import logo from "../assets/Ui_Discoveries Logo.png"
 
 function Navigation() {
   return (
@@ -65,6 +66,7 @@ className="navbar fixed top-0 justify-between z-40 bg-white shadow-lg  " >
       </motion.ul>
     </div>
     <a className="btn btn-ghost normal-case ff-barlow text-2xl tracking-wider">UI Discoveries</a>
+    {/* <a className="btn btn-ghost normal-case ff-barlow text-2xl tracking-wider"><motion.img src={logo} width="50px" height="50px" alt="" loading="lazy" /> UI Discoveries</a> */}
   </div>
   <div className="navbar-center hidden lg:flex">
     <motion.ul
