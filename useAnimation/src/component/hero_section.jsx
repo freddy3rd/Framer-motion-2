@@ -105,13 +105,13 @@ function Hero_section() {
                       htmlFor="my-drawer-4"
                       className="drawer-overlay"
                     ></label>
-                    <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content z-20">
+                    <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content ">
                       <Contact />
                     </ul>
                   </div>
                 </div>
                 <a
-                  className=" bg-sky-500 hover:bg-cyan-600 font-bold z-10 px-4 py-2 flex items-center gap-2 cursor-pointer"
+                  className=" bg-sky-500 hover:bg-cyan-600 font-bold px-4 py-2 flex items-center gap-2 cursor-pointer"
                   href={cv}
                   download
                 >
