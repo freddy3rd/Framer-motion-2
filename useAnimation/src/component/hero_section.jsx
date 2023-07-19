@@ -77,7 +77,7 @@ function Hero_section() {
                 outstanding digital experiences that leave a lasting impact.
               </p>
               <div className="flex gap-4 ">
-                <div className="drawer drawer-end w-[max-content] flex content-end ">
+                <div className="drawer drawer-content w-[max-content] flex content-end z-50">
                   <input
                     id="my-drawer-4"
                     type="checkbox"
@@ -96,8 +96,8 @@ function Hero_section() {
                     </label>
                   </div>
                   <div
-                    className="drawer-side "
-                    onClick={() => {
+                    className="drawer-side"
+                    onClick={(e) => {
                       document.body.style.overflow = "auto";
                     }}
                   >

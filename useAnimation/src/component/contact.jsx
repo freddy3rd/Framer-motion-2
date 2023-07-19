@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { FaTelegramPlane } from "react-icons/fa";
+import { FaTelegramPlane, FaPhoneAlt } from "react-icons/fa";
 
 function Contact() {
   const employeerEmail = useRef();
@@ -54,7 +54,7 @@ function Contact() {
         If you have any inquiries or would like to discuss potential
         collaborations, please don't hesitate to get in touch with me.
       </p>
-      <hr />
+
       <form className="grid gap-2" onSubmit={handleSubmit}>
         <span className="block text-sm font-medium text-slate-700 ">Email</span>
         <input
@@ -71,8 +71,8 @@ function Contact() {
           ref={content}
           name=""
           id=""
-          cols="30"
-          rows="10"
+          cols="20"
+          rows="5"
           className="p-2 resize-none"
           placeholder="Your message goes here"
         ></textarea>
@@ -85,6 +85,12 @@ function Contact() {
           {isSent && "SEND" && <FaTelegramPlane />}
         </button>
       </form>
+      <div className="divider lg:divider-vertical">OR</div>
+      <h4 className="flex gap-2 align-center font-bold">
+        <FaPhoneAlt /> Contact Number
+      </h4>
+      <li>+639269247441</li>
+      <li>+639511451225</li>
     </div>
   );
 }
