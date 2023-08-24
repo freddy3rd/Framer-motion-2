@@ -111,7 +111,7 @@ function Hero_section() {
                   </div>
                 </div>
                 <a
-                  className=" bg-sky-500 hover:bg-cyan-600 font-bold px-4 py-2 flex items-center gap-2 cursor-pointer"
+                  className=" bg-sky-500 hover:bg-cyan-600 font-bold px-4 py-2 flex items-center gap-2 cursor-pointer z-10"
                   href={cv}
                   download
                 >

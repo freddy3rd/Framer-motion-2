@@ -4,6 +4,7 @@ import { FaDirections } from "react-icons/fa";
 import { reveal } from "../utils/animation";
 import SHS from "../assets/high_school.jpg";
 import QCU from "../assets/Quezon-City-University.jpg";
+import img_2 from "../assets/image-2.png";
 
 export default function About() {
   const [activeSchool, setACtiveSchool] = useState("HS");
@@ -72,11 +73,7 @@ export default function About() {
 
         <div className="mx-5">
           <div className=" w-[100%] md:max-w-[500px] h-[300px] self-center">
-            <img
-              src="http://source.unsplash.com/Bd7gNnWJBkU"
-              className="w-[100%] h-[100%] object-cover rounded-md shadow-2xl"
-              alt=""
-            />
+            <img src={img_2} className="w-full h-full " alt="" />
           </div>
         </div>
       </div>

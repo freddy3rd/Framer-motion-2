@@ -20,8 +20,8 @@ function Project_preview({ activePreview }) {
               key={data.ProjectName}
               className="preview-container w-full h-full bg-slate-400"
             >
-              {" "}
               {data.ProjectName}
+              {console.log(data)}
             </div>
           );
         }

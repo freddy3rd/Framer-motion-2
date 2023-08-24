@@ -10,6 +10,7 @@ function Project() {
   const [isSelected, setSelected] = useState("Responsive Message");
   const [activeTab, setActiveTab] = useState(0);
   const [thumbnails, setThumbnails] = useState([]);
+  const [language, setLanguage] = useState([]);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -20,10 +21,6 @@ function Project() {
       mainControl.start("revealedVariant");
     }
   }, [isInView]);
-
-  useEffect(() => {
-    console.log(isSelected);
-  }, [isSelected]);
 
   function toggleTab(index) {
     setActiveTab(index);
@@ -52,16 +49,32 @@ function Project() {
                   <h1 className="ff-barlow text-4xl md:text-6xl text-gray-500">
                     {data.ProjectName}
                   </h1>
+
                   <span className="absolute top-0 -right-5">
-                    <a href={data.link} target="_blank">
-                      {" "}
+                    <a
+                      href={data.link}
+                      target="_blank"
+                      className="tooltip tooltip-left"
+                      data-tip="Visit Website"
+                    >
                       <FaExternalLinkAlt href={data.link} />
                     </a>
                   </span>
-                  <div className="h-full">
+
+                  <div className="h-full mt-8 flex flex-col justify-center">
+                    <div className="flex gap-2 flex-wrap mb-4">
+                      {Object.entries(data.language).map(([key, value]) => (
+                        <p
+                          key={value}
+                          className="px-4 py-2 rounded-full bg-slate-200 font-semibold capitalize"
+                        >
+                          {value}
+                        </p>
+                      ))}
+                    </div>
                     <img
                       src={data.thumnails[0]}
-                      className="w-full h-full object-scale-down"
+                      className="w-full object-scale-down "
                       alt=""
                     />
                   </div>
