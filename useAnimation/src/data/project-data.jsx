@@ -29,7 +29,6 @@ export const projects = [
       0: "HTML",
       1: "Tailwind Css",
       2: "react Js",
-      3: "framer-motion",
     },
     link: "https://main--aesthetic-sawine-7f3f32.netlify.app/",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima aperiam veniam amet explicabo. Vel pariatur sunt facere nihil laboriosam illo?",

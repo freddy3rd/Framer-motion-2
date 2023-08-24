@@ -61,12 +61,12 @@ function Project() {
                     </a>
                   </span>
 
-                  <div className="h-full mt-8 flex flex-col justify-center">
-                    <div className="flex gap-2 flex-wrap mb-4">
+                  <div className="h-full md:mt-8 py-4 flex flex-col justify-center">
+                    <div className="flex gap-2 flex-wrap mb-4 items-center">
                       {Object.entries(data.language).map(([key, value]) => (
                         <p
                           key={value}
-                          className="px-4 py-2 rounded-full bg-slate-200 font-semibold capitalize"
+                          className="px-3 py-1 rounded-full bg-slate-200 font-semibold capitalize text-sm"
                         >
                           {value}
                         </p>
