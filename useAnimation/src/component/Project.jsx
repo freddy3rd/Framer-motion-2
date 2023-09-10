@@ -2,16 +2,18 @@ import React, { useEffect, useRef, useState } from "react";
 import { projects } from "../data/project-data";
 import { reveal, inview } from "../utils/animation";
 import { motion, useAnimation, useInView } from "framer-motion";
-import Project_preview from "./project-preview";
-import { FaExternalLinkAlt } from "react-icons/fa";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+
+import {
+  FaExternalLinkAlt,
+  FaRegArrowAltCircleRight,
+  FaRegArrowAltCircleLeft,
+} from "react-icons/fa";
+import Carousel from "./Carousel";
 
 function Project() {
-  const [isSelected, setSelected] = useState("Responsive Message");
+  const [isSelected, setSelected] = useState("Ecommerce Design");
   const [activeTab, setActiveTab] = useState(0);
-  const [thumbnails, setThumbnails] = useState([]);
-  const [language, setLanguage] = useState([]);
-
+  const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControl = useAnimation();
@@ -30,7 +32,6 @@ function Project() {
     setSelected(project);
   }
 
-  const option = {};
   return (
     <>
       <div
@@ -61,22 +62,26 @@ function Project() {
                     </a>
                   </span>
 
-                  <div className="h-full md:mt-8 py-4 flex flex-col justify-center">
+                  <div className="image-container h-full w-full md:mt-8 py-4 flex flex-col justify-center">
                     <div className="flex gap-2 flex-wrap mb-4 items-center">
-                      {Object.entries(data.language).map(([key, value]) => (
+                      {data.language.map((data) => (
                         <p
-                          key={value}
+                          key={data}
                           className="px-3 py-1 rounded-full bg-slate-200 font-semibold capitalize text-sm"
                         >
-                          {value}
+                          {data}
                         </p>
                       ))}
                     </div>
-                    <img
-                      src={data.thumnails[0]}
-                      className="w-full object-scale-down "
-                      alt=""
-                    />
+
+                    <div className="w-full h-full relative">
+                      <Carousel slides={data.thumnails} />
+                      {/* <img
+                        src={data.thumnails[0].image}
+                        className="h-full object-contain"
+                        alt=""
+                      /> */}
+                    </div>
                   </div>
                 </div>
               );
@@ -131,7 +136,7 @@ function Project() {
                   }`}
                 >
                   <img
-                    src={data.thumnails[0]}
+                    src={data.thumnails[0].image}
                     alt=""
                     className="w-full h-full object-cover rounded-lg z-10"
                   />

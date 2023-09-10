@@ -3,19 +3,8 @@ import video from "../assets/video/hero_video.mp4";
 import cv from "../assets/Arnejo_Clifford_resume.pdf";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import Contact from "./contact";
-// import projects from '../data/project-data'
+
 function Hero_section() {
-  //   const [activeContact, setContact] = useState(false);
-
-  //   function active_Contact(status) {
-  //     // setContact(status);
-
-  //     if (status) {
-  //       document.body.style.overflow = "hidden";
-  //     } else {
-  //       document.body.style.overflow = "auto";
-  //     }
-  //   }
   return (
     <>
       <div
@@ -115,7 +104,7 @@ function Hero_section() {
                   href={cv}
                   download
                 >
-                  <FaCloudDownloadAlt /> Resume{" "}
+                  <FaCloudDownloadAlt /> Resume
                 </a>
               </div>
             </div>

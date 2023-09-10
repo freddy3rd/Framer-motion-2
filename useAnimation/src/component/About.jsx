@@ -50,7 +50,6 @@ export default function About() {
             My Journey
           </h1>
           <p className=" md:max-w-[450px] ff-monsterot text-justify font-light text-black my-4">
-            {" "}
             I prioritize continuous learning and staying up-to-date with the
             latest front-end technologies, trends, and best practices. This
             allows me to adapt quickly to evolving industry standards and
