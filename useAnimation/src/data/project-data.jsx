@@ -24,7 +24,7 @@ import project_7b from "../assets/framer_motion/desktop-design.png";
 import project_8a from "../assets/MovieWebsite/full_page.png";
 import project_8b from "../assets/MovieWebsite/Hero_page.png";
 
-import project_9a from "../assets/Nike_landingPage/full_page.png";
+import project_9a from "../assets/Nike_landingPage/Full_page.png";
 import project_9b from "../assets/Nike_landingPage/Hero_page.png";
 import project_9c from "../assets/Nike_landingPage/mobile_hero.jpg";
 import project_9d from "../assets/Nike_landingPage/mobile_footer.jpg";
